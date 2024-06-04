@@ -6,7 +6,34 @@
         xmlns:local="clr-namespace:AssignmentListView"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FFFBD4F6">
+        <ListView x:Name="listViewStudents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="364,40,10,64">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = Name}" Header="Student Name" Width="112px"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = Grade1}" Header="Grade 1" Width="100px"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = Grade2}" Header="Grade 2" Width="100px"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path = AverageGrade}" Header="Average" Width="100px"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Rectangle HorizontalAlignment="Left" Height="178" Margin="70,34,0,0" Stroke="Black" VerticalAlignment="Top" Width="273" Fill="White"/>
+        <TextBox x:Name="txtBoxStudentName" HorizontalAlignment="Left" Margin="170,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxGrade1" HorizontalAlignment="Left" Margin="170,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxGrade2" HorizontalAlignment="Left" Margin="170,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Student Name:" HorizontalAlignment="Left" Margin="79,55,0,0" VerticalAlignment="Top"/>
+        <Label Content="Grade 1:" HorizontalAlignment="Left" Margin="114,95,0,0" VerticalAlignment="Top"/>
+        <Label Content="Grade 2:" HorizontalAlignment="Left" Margin="114,135,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddStudent" Content="Add Student" HorizontalAlignment="Left" Margin="170,176,0,0" VerticalAlignment="Top" Width="80" Click="btnAddStudent_Click"/>
+        <Label Content="Create Student" HorizontalAlignment="Left" Margin="70,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Rectangle HorizontalAlignment="Left" Height="119" Margin="70,263,0,0" Stroke="Black" VerticalAlignment="Top" Width="273" Fill="White"/>
+        <Label Content="Edit Student" HorizontalAlignment="Left" Margin="70,229,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <TextBox x:Name="txtBoxNewGrade1" HorizontalAlignment="Left" Margin="170,285,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxNewGrade2" HorizontalAlignment="Left" Margin="170,317,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Grade 1:" HorizontalAlignment="Left" Margin="114,280,0,0" VerticalAlignment="Top"/>
+        <Label Content="Grade 2:" HorizontalAlignment="Left" Margin="114,312,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnEditStudent" Content="Edit Student" HorizontalAlignment="Left" Margin="170,350,0,0" VerticalAlignment="Top" Width="80" Click="btnEditStudent_Click"/>
+        <Button x:Name="btnDeleteStudent" Content="DELETE STUDENT" HorizontalAlignment="Left" Margin="522,375,0,0" VerticalAlignment="Top" Width="110" Click="btnDeleteStudent_Click"/>
 
     </Grid>
 </Window>
